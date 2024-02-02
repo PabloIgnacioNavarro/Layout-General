@@ -1,0 +1,93 @@
+/* ESTA ES LA CONFIGURACIÓN DE LAYOUT GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONTENEDOR GRID */
+
+.grid-contenedor {
+  display: grid;
+  min-height: 160vh;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    "header header"
+    "lateral productos"
+    "pie pie";
+}
+.cabeza {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(14, 14, 170);
+  grid-area: header;
+}
+
+/* DISEÑO DE BARRA DE NAVEGACIÓN */
+
+.lateral {
+  padding: 10px;
+  background-color: rgba(188, 190, 201, 0.945);
+  grid-area: lateral;
+}
+.lateral ul {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  list-style: none;
+}
+
+/* DISEÑO PRODUCTOS */
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  place-items: center;
+  background-color: rgba(188, 190, 201, 0.945);
+  grid-area: productos;
+}
+
+/* DISEÑO FOOTER */
+
+.pie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  grid-area: pie;
+}
+
+/* DISEÑO CARDS */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  background-color: rgba(188, 190, 201, 0.945);
+}
+
+/* COLOR TEXTO */
+
+h4 {
+  color: white;
+}
+
+/* CONFIGURACIÓN DE IMÁGENES */
+
+.alinear {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  height: 800px;
+  width: 350px;
+  padding: 10px;
+}
